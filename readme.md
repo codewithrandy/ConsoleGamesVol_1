@@ -7,7 +7,7 @@ My plan is to create a companion Vol. II that will focus on GUI games and PyGame
 
 # GAME LIST
 - Hangman . . . . . . . . . . . .. (in progress)
-- Magic 8-Ball . . . . . . . . . .. (in progress)
-- Number Guessing . . . . . . (in progress)
+- Magic 8-Ball
+- Number Guessing
 - Rock, Paper, Scissors . . . (in progress)
 - Tic-Tac-Toe . . . . . . . . . . .. (in progress)
