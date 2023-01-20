@@ -10,4 +10,5 @@ My plan is to create a companion Vol. II that will focus on GUI games and PyGame
 - Magic 8-Ball
 - Number Guessing
 - Rock, Paper, Scissors . . . (in progress)
+- Text Adventure . . . . . . . . (in progress)
 - Tic-Tac-Toe . . . . . . . . . . .. (in progress)
