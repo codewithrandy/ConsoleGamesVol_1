@@ -61,7 +61,6 @@ def did_win(cpu, player):
 
 
 def clear_screen():
-    # CLEARS THE CONSOLE SCREEN
     a = sys.platform
     if a == 'win32':
         os.system('cls')
