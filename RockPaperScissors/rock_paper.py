@@ -2,8 +2,9 @@ import os
 import random
 import sys
 
+
 def menu():
-    is_playing = input('Ready to Play? (Y/N) ')
+    is_playing = input('Wanna Play? (Y/N) ')
     is_playing = is_playing.lower()
     if is_playing == 'y' or is_playing == 'yes':
         clear_screen()
@@ -17,18 +18,46 @@ def menu():
 
 
 def start_game():
-    weapons = ['rock', 'paper', 'scissors']
+    weapons = ['r', 'p', 's']
     cpu = random.choice(weapons)
     print('Choose your weapon ...')
-    print('R - Rock')
-    print('P - Paper')
-    print('S - Scissors')
-    player = input()
-    get_winner(cpu, player)
+    print('r .. Rock')
+    print('p .. Paper')
+    print('s .. Scissors')
+    player = input().lower()
+    if player == cpu:
+        is_tie()
+    is_winner = did_win(cpu, player)
+    clear_screen()
+    if is_winner:
+        print(f'Congrats !!! {get_weapon(player)} beats {get_weapon(cpu)}')
+    else:
+        print(f'Sorry !!! {get_weapon(cpu)} beats {get_weapon(player)}')
+    menu()
 
 
-def get_winner(cpu, player):
-    pass
+def is_tie():
+    clear_screen()
+    print('Game was a tie !!')
+    menu()
+
+
+def get_weapon(weapon) -> str:
+    match weapon:
+        case 'r':
+            return 'Rock'
+        case 'p':
+            return 'Paper'
+        case 's':
+            return 'Scissors'
+
+
+def did_win(cpu, player):
+    if player == 'r' and cpu == 's' \
+            or player == 'p' and cpu == 'r' \
+            or player == 's' and cpu == 'p':
+        return True
+    return False
 
 
 def clear_screen():
