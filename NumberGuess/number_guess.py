@@ -4,12 +4,12 @@ import sys
 
 
 def menu():
-    letsplay = input('Shall we play a game? (Y/N) ')
-    letsplay = letsplay.lower()
-    if letsplay == 'y' or letsplay == 'yes':
+    is_playing = input('Shall we play a game? (Y/N) ')
+    is_playing = is_playing.lower()
+    if is_playing == 'y' or is_playing == 'yes':
         clear_screen()
         start_game()
-    elif letsplay == 'n' or letsplay == 'no':
+    elif is_playing == 'n' or is_playing == 'no':
         game_over()
     else:
         clear_screen()
